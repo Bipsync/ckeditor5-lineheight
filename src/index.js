@@ -1,7 +1,3 @@
-import lineheight from './../theme/icons/line-height.svg';
-
-export { default as LineHeight } from './lineheight';
-
-export const icons = {
-	lineheight
-};
+export { default as LineHeight } from './LineHeight';
+export { default as LineHeightEditing } from './LineHeightEditing.js';
+export { default as LineHeightUI } from './LineHeightUI.js';

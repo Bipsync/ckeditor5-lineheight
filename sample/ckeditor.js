@@ -17,7 +17,7 @@ import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
 import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
 import { Base64UploadAdapter } from '@ckeditor/ckeditor5-upload';
 
-import LineHeight from '../src/lineheight';
+import LineHeight from '../src/LineHeight';
 
 /* global document, window */
 
