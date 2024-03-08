@@ -1,5 +1,5 @@
 import { LineHeight as LineHeightDll, icons } from '../src';
-import LineHeight from '../src/lineheight';
+import LineHeight from '../src/LineHeight';
 
 import ckeditor from './../theme/icons/ckeditor.svg';
 
