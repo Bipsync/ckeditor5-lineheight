@@ -1,7 +1,7 @@
 {
   "name": "@bipsync/ckeditor5-lineheight",
   "version": "0.0.1",
-  "description": "A plugin for CKEditor 5.",
+  "description": "A plugin for CKEditor 5 to allow setting of line height on block elements",
   "keywords": [
     "ckeditor",
     "ckeditor5",
@@ -80,5 +80,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-utils": "^41.2.0"
   }
 }

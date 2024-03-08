@@ -59,6 +59,7 @@ ClassicEditor
 			'bulletedList',
 			'numberedList',
 			'|',
+			'lineHeight',
 			'outdent',
 			'indent',
 			'|',
@@ -85,6 +86,15 @@ ClassicEditor
 				'tableColumn',
 				'tableRow',
 				'mergeTableCells'
+			]
+		},
+		'lineHeight': {
+			'options': [
+				'1',
+				'1.15',
+				'',
+				'2',
+				'3'
 			]
 		}
 	} )
