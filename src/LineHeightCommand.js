@@ -9,7 +9,7 @@ export default class LineHeightCommand extends Command {
 		const model = this.editor.model;
 
 		const firstBlock = first( model.document.selection.getSelectedBlocks() );
-		this.isEnabled = model.schema.checkAttribute( firstBlock, 'lineHeight' );
+		this.isEnabled = firstBlock ? model.schema.checkAttribute( firstBlock, 'lineHeight' ) : false;
 		this.value = this.isEnabled && firstBlock.hasAttribute( 'lineHeight' ) ? firstBlock.getAttribute( 'lineHeight' ) : '';
 	}
 
