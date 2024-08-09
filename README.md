@@ -1,6 +1,8 @@
 @bipsync/ckeditor5-lineheight
 =============================
 
+A CKEditor 5 plugin which adds the ability to set the line height of blocks.
+
 This package was created by the [ckeditor5-package-generator](https://www.npmjs.com/package/ckeditor5-package-generator) package.
 
 ## Table of contents
