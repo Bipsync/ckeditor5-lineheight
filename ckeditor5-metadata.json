@@ -4,12 +4,12 @@
       "name": "Line height",
       "className": "LineHeight",
       "description": "Adds the ability to set the line height of blocks in CKEditor.",
-      "path": "src/LineHeight.js",
+      "path": "src/lineheight.js",
       "uiComponents": [
         {
-          "name": "lineHeightDropdown",
-          "type": "Dropdown",
-          "iconPath": "theme/icons/line-height.svg"
+          "name": "lineHeightButton",
+          "type": "Button",
+          "iconPath": "theme/icons/ckeditor.svg"
         }
       ]
     }

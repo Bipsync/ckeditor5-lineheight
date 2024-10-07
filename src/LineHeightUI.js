@@ -1,6 +1,10 @@
-import { Plugin } from 'ckeditor5/src/core';
-import { Collection } from 'ckeditor5/src/utils';
-import { addListToDropdown, createDropdown as CreateDropdown, ViewModel } from 'ckeditor5/src/ui';
+import {
+	Plugin,
+	Collection,
+	addListToDropdown,
+	createDropdown as CreateDropdown,
+	ViewModel
+} from 'ckeditor5';
 
 import lineHeightIcon from '../theme/icons/line-height.svg';
 
@@ -18,7 +22,7 @@ export default class LineHeightUI extends Plugin {
 	init() {
 		const editor = this.editor;
 		const t = editor.t;
-		const options = this.editor.config.get( 'lineHeight.options' );
+		const options = this.editor.config.get( 'lineHeight.options' ) || [];
 
 		editor.ui.componentFactory.add( 'lineHeight', locale => {
 			const command = editor.commands.get( 'lineHeight' );

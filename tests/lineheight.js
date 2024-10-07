@@ -1,8 +1,11 @@
-import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
-import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
-import Heading from '@ckeditor/ckeditor5-heading/src/heading';
-import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
-import LineHeight from '../src/LineHeight';
+import {
+	Essentials,
+	Paragraph,
+	Heading,
+	ClassicEditor
+} from 'ckeditor5';
+
+import LineHeight from '../src/LineHeight.js';
 
 /* global document */
 
@@ -26,7 +29,7 @@ describe( 'LineHeight', () => {
 					LineHeight
 				],
 				toolbar: [
-					'lineHeightButton'
+					'lineHeight'
 				]
 			} );
 		} );
@@ -43,17 +46,7 @@ describe( 'LineHeight', () => {
 		} );
 
 		it( 'should add an icon to the toolbar', () => {
-			expect( editor.ui.componentFactory.has( 'lineHeightButton' ) ).to.equal( true );
-		} );
-
-		it( 'should add a text into the editor after clicking the icon', () => {
-			const icon = editor.ui.componentFactory.create( 'lineHeightButton' );
-
-			expect( editor.getData() ).to.equal( '' );
-
-			icon.fire( 'execute' );
-
-			expect( editor.getData() ).to.equal( '<p>Hello CKEditor 5!</p>' );
+			expect( editor.ui.componentFactory.has( 'lineHeight' ) ).to.equal( true );
 		} );
 	} );
 } );

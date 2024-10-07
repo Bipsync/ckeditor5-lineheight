@@ -1,12 +1,9 @@
 import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
-
 import {
 	ClassicEditor,
 	Autoformat,
-	Base64UploadAdapter,
-	BlockQuote,
 	Bold,
-	Code,
+	BlockQuote,
 	CodeBlock,
 	Essentials,
 	Heading,
@@ -22,12 +19,12 @@ import {
 	MediaEmbed,
 	Paragraph,
 	Table,
-	TableToolbar
+	TableToolbar,
+	Base64UploadAdapter,
+	Code
 } from 'ckeditor5';
 
 import LineHeight from '../src/LineHeight.js';
-
-import 'ckeditor5/ckeditor5.css';
 
 /* global document, window */
 
@@ -58,10 +55,7 @@ ClassicEditor
 			Base64UploadAdapter
 		],
 		toolbar: [
-			'undo',
-			'redo',
-			'|',
-			'lineHeight',
+			'lineHeightButton',
 			'|',
 			'heading',
 			'|',
@@ -72,6 +66,7 @@ ClassicEditor
 			'bulletedList',
 			'numberedList',
 			'|',
+			'lineHeight',
 			'outdent',
 			'indent',
 			'|',
@@ -79,7 +74,10 @@ ClassicEditor
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
-			'codeBlock'
+			'codeBlock',
+			'|',
+			'undo',
+			'redo'
 		],
 		image: {
 			toolbar: [
@@ -95,6 +93,15 @@ ClassicEditor
 				'tableColumn',
 				'tableRow',
 				'mergeTableCells'
+			]
+		},
+		'lineHeight': {
+			'options': [
+				'1',
+				'1.15',
+				'',
+				'2',
+				'3'
 			]
 		}
 	} )

@@ -1,6 +1,6 @@
 {
   "name": "@bipsync/ckeditor5-lineheight",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A plugin for CKEditor 5 to allow setting of line height on block elements",
   "keywords": [
     "ckeditor",
@@ -8,62 +8,49 @@
     "ckeditor 5",
     "ckeditor5-feature",
     "ckeditor5-plugin",
-    "ckeditor5-dll",
     "ckeditor5-package-generator"
   ],
-  "main": "src/index.js",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*",
+    "./browser/*": null,
+    "./package.json": "./package.json"
+  },
   "license": "MIT",
   "engines": {
-    "node": ">=16.0.0",
+    "node": ">=18.0.0",
     "npm": ">=5.7.1"
   },
   "files": [
-    "lang",
-    "src",
-    "theme",
-    "build",
+    "dist",
     "ckeditor5-metadata.json"
   ],
   "devDependencies": {
-    "@ckeditor/ckeditor5-autoformat": ">=41.2.0",
-    "@ckeditor/ckeditor5-basic-styles": ">=41.2.0",
-    "@ckeditor/ckeditor5-block-quote": ">=41.2.0",
-    "@ckeditor/ckeditor5-code-block": ">=41.2.0",
-    "@ckeditor/ckeditor5-core": ">=41.2.0",
-    "@ckeditor/ckeditor5-editor-classic": ">=41.2.0",
-    "@ckeditor/ckeditor5-essentials": ">=41.2.0",
-    "@ckeditor/ckeditor5-heading": ">=41.2.0",
-    "@ckeditor/ckeditor5-image": ">=41.2.0",
-    "@ckeditor/ckeditor5-indent": ">=41.2.0",
+    "@ckeditor/ckeditor5-dev-build-tools": "43.0.0",
     "@ckeditor/ckeditor5-inspector": ">=4.1.0",
-    "@ckeditor/ckeditor5-link": ">=41.2.0",
-    "@ckeditor/ckeditor5-list": ">=41.2.0",
-    "@ckeditor/ckeditor5-media-embed": ">=41.2.0",
-    "@ckeditor/ckeditor5-package-tools": "^1.1.0",
-    "@ckeditor/ckeditor5-paragraph": ">=41.2.0",
-    "@ckeditor/ckeditor5-table": ">=41.2.0",
-    "@ckeditor/ckeditor5-theme-lark": ">=41.2.0",
-    "@ckeditor/ckeditor5-upload": ">=41.2.0",
-    "ckeditor5": ">=41.2.0",
+    "@ckeditor/ckeditor5-package-tools": "^2.1.1",
+    "ckeditor5": "latest",
     "eslint": "^7.32.0",
-    "eslint-config-ckeditor5": ">=5.3.2",
+    "eslint-config-ckeditor5": ">=7.1.1",
     "http-server": "^14.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.6",
     "stylelint": "^13.13.1",
-    "stylelint-config-ckeditor5": ">=5.3.2"
+    "stylelint-config-ckeditor5": ">=7.1.1"
   },
   "peerDependencies": {
-    "ckeditor5": ">=41.2.0"
+    "ckeditor5": ">=42.0.0 || ^0.0.0-nightly"
   },
   "scripts": {
-    "dll:build": "ckeditor5-package-tools dll:build",
-    "dll:serve": "http-server ./ -o sample/dll.html",
+    "build:dist": "node ./scripts/build-dist.mjs",
     "lint": "eslint \"**/*.js\" --quiet",
     "start": "ckeditor5-package-tools start",
     "stylelint": "stylelint --quiet --allow-empty-input 'theme/**/*.css'",
     "test": "ckeditor5-package-tools test",
-    "prepare": "yarn run dll:build",
+    "prepare": "yarn run build:dist",
     "translations:collect": "ckeditor5-package-tools translations:collect",
     "translations:download": "ckeditor5-package-tools translations:download",
     "translations:upload": "ckeditor5-package-tools translations:upload"
@@ -80,8 +67,5 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "dependencies": {
-    "@ckeditor/ckeditor5-utils": "^41.2.0"
   }
 }
