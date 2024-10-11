@@ -25,6 +25,9 @@
     "npm": ">=5.7.1"
   },
   "files": [
+    "lang",
+    "src",
+    "theme",
     "dist",
     "ckeditor5-metadata.json"
   ],
