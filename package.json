@@ -10,15 +10,7 @@
     "ckeditor5-plugin",
     "ckeditor5-package-generator"
   ],
-  "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*",
-    "./browser/*": null,
-    "./package.json": "./package.json"
-  },
+  "main": "src/index.js",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0",
